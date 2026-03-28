@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo list</title>
+</head>
+<body>
+    <div class="app-container">
+      <aside class="sidebar">
+            <h2>Projects</h2>
+            <ul class="project-list">
+                <li class="active">All Todos</li> 
+                <li>Work</li>
+                <li>Personal</li>
+            </ul>
+        </aside>
+        
+        <main class="main-content">
+            <header>
+                <h1>Inbox</h1>
+                <button id="add-btn" class="add-btn">+ New Task</button>
+            </header>
+            
+            <div id="task-list" class="task-list">
+                </div>
+        </main>
+    </div>
+    <dialog id="task-modal" class="modal">
+        <form id="task-form">
+           <h3>Create New Task</h3>
+            
+            <div class="input-group">
+                <label for="task-title">What needs to be done?</label>
+                <input type="text" id="task-title" required autocomplete="off" placeholder="e.g., Prepare quarterly report">
+            </div>
+            
+            <div class="input-group">
+                <label for="task-date">Due Date</label>
+                <input type="date" id="task-date" required>
+            </div>
+
+            <div class="input-group">
+                <label>Category</label>
+                <div class="segmented-control">
+                    <input type="radio" id="cat-work" name="task-category" value="Work" checked>
+                    <label for="cat-work">Work</label>
+                    
+                    <input type="radio" id="cat-personal" name="task-category" value="Personal">
+                    <label for="cat-personal">Personal</label>
+                </div>
+            </div>
+
+            <div class="input-group">
+                <label>Priority</label>
+                <div class="priority-control">
+                    <input type="radio" id="pri-low" name="task-priority" value="Low" checked>
+                    <label for="pri-low" class="pri-low">Low</label>
+                    
+                    <input type="radio" id="pri-medium" name="task-priority" value="Medium">
+                    <label for="pri-medium" class="pri-medium">Medium</label>
+                    
+                    <input type="radio" id="pri-high" name="task-priority" value="High">
+                    <label for="pri-high" class="pri-high">High</label>
+                </div>
+            </div>
+
+            <div class="modal-actions">
+                <button type="button" id="cancel-btn" class="cancel-btn">Cancel</button>
+                <button type="submit" class="submit-btn">Add Task</button>
+            </div>
+    </dialog>
+</body>
+</html>
